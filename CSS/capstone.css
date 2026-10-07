@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: ;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+:root{
+    --background-color: ;
+    --text-color: ;
+    --primary-color: ;
+    --secondary-color: ;
+    --border-color: ;
+}
+[data-theme="dark"] {
+    --background-color: ;
+    --text-color: ;
+    --primary-color: ;
+    --secondary-color: ;
+    --border-color: ;
+}
+
+body{
+    min-height: ;
+}
+header,
+main,
+footer{
+    width: 100%;
+}
+main{
+    max-width: ;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+section{
+    margin-bottom: 40px;
+}
