@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Planets</title>
+        <link rel="stylesheet" href="Foundation.css">
+    </head>
+    <body>
+        <header>
+            <h1>Planets</h1>
+            <button id="theme-toggle" type="button">DARK</button>
+        </header>
+
+        <main>
+            <section id="search-section">
+                <label for="search-input">Search planets</label>
+                <input type="search" id="search-input" placeholder="Search planets...">
+            </section>
+
+            <section id="cards-section">
+                <h2>Planet Cards</h2>
+                <div id="cards-container"></div>
+            </section>
+
+            <section id="table-section">
+                <h2>Planet Data</h2>
+                <table id="planets-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Diameter</th>
+                            <th>Distance from Sun</th>
+                            <th>Moons</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Planets</p>
+        </footer>
+
+        <script src="js/data.js" defer></script>
+        <script src="js/theme.js" defer></script>
+        <script src="js/search.js" defer></script>
+        <script src="js/card.js" defer></script>
+        <script src="js/table.js" defer></script>
+    </body>
+</html>
