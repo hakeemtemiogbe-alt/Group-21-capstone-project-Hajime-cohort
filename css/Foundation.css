@@ -1,0 +1,484 @@
+/* =========================================================
+   FOUNDATION.CSS  (Group 21 planets app)
+   Built from the Figma export (Hajime cohort).
+   Teammate's original variable NAMES are kept; the VALUES now
+   use the colours measured from the design.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap");
+
+/* ---------- 1. RESET (original) ---------- */
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* ---------- 2. COLOURS ---------- */
+/* original variable names, new values from the design */
+:root{
+--background-color:#f6f8ff ;      /* page */
+--text-color:#2b3442 ;            /* main text */
+--primary-color:#0079ff ;         /* blue: type label, button, focus ring */
+--secondary-color:#ffffff ;       /* card and search bar */
+--border-color:#ffffff ;          /* white lines between table cells */
+
+/* new variables */
+--stats-color:#f6f8ff;            /* Gravity / Mass / Period box */
+--muted-color:#788fb4;            /* card description */
+--icon-text-color:#4b6a9b;        /* small numbers by the icons */
+--heading-color:#164baf;          /* "Planetary Facts at a Glance" */
+--intro-color:#0f2a44;            /* paragraph under the heading */
+--toggle-color:#4b6a9b;
+--toggle-hover-color:#164baf;
+--footer-color:#4b6a9b;
+--button-hover-color:#60abff;
+--error-color:#f74646;
+--table-head-bg:#164baf;
+--table-head-text:#ffffff;
+--table-group-bg:#d1e3ff;         /* Terrestrial / Jovian / Dwarf cells */
+--table-cell-bg:#f2f7ff;
+--table-cell-text:#212121;
+--shadow:0 16px 30px -10px rgba(70, 96, 187, 0.2);
+}
+[data-theme="dark"] {
+--background-color:#141d2f ;
+--text-color:#ffffff ;
+--primary-color:#0079ff ;
+--secondary-color: #1e2a47 ;
+--border-color:#ffffff ;
+
+--stats-color:#141d2f;
+--muted-color:#3d5782;
+--icon-text-color:#ffffff;
+--heading-color:#ffffff;
+--intro-color:#90a4d4;
+--toggle-color:#90a4d4;
+--toggle-hover-color:#ffffff;
+--footer-color:#d1e3ff;
+--table-head-bg:#141d2f;
+--table-head-text:#d1e3ff;
+--table-group-bg:#90a4d4;
+--shadow:none;
+}
+
+/* ---------- 3. BASE ---------- */
+body{
+font-family:"Inter", Arial, Helvetica, sans-serif ;
+background-color: var(--background-color);
+color: var(--text-color);
+line-height: 1.6;
+min-height: 100vh;
+transition: background-color 0.25s ease, color 0.25s ease;
+}
+header,
+main,
+footer{
+width: 100%;
+max-width: 735px;          /* content column in the design */
+margin: 0 auto;
+}
+main{
+padding: 0 0 20px;
+}
+section{
+margin-bottom: 40px;
+}
+h1, h2, h3{
+line-height: 1.25;
+}
+
+/* ---------- 4. HEADER ---------- */
+header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 16px;
+padding: 56px 0 32px;
+}
+header h1{
+display: flex;
+align-items: center;
+font-size: 1.5rem;
+}
+/* one logo image; in dark mode it is turned white */
+.logo{ display: block; height: 40px; width: auto; }
+[data-theme="dark"] .logo{ filter: brightness(0) invert(1); }
+
+#theme-toggle{
+display: inline-flex;
+align-items: center;
+gap: 12px;
+font-family: "Space Mono", monospace;
+font-size: 0.8rem;
+font-weight: 700;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+background: none;
+border: 2px solid transparent;
+border-radius: 8px;
+padding: 6px 8px;
+color: var(--toggle-color);
+cursor: pointer;
+}
+/* sun (shown in dark mode) or moon (shown in light mode) beside the text */
+#theme-toggle::after{
+content: "";
+width: 20px;
+height: 20px;
+background-repeat: no-repeat;
+background-size: contain;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234b6a9b'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E");
+}
+[data-theme="dark"] #theme-toggle::after{
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2390a4d4' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='4' fill='%2390a4d4'/%3E%3Cpath d='M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1'/%3E%3C/svg%3E");
+}
+#theme-toggle:hover{
+color: var(--toggle-hover-color);
+}
+#theme-toggle:focus-visible,
+#search-section:focus-within,
+#search-button:focus-visible{
+outline: 2px solid var(--primary-color);
+outline-offset: 2px;
+}
+
+/* ---------- 5. SEARCH BAR ---------- */
+/* The whole section is the rounded bar: icon | input | message | button */
+#search-section{
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 8px 8px 8px 24px;
+margin-bottom: 24px;
+border-radius: 16px;
+background-color: var(--secondary-color);
+box-shadow: var(--shadow);
+}
+/* keep the label for screen readers, hide it visually */
+#search-section label{
+position: absolute;
+width: 1px;
+height: 1px;
+overflow: hidden;
+clip: rect(0 0 0 0);
+white-space: nowrap;
+}
+.search-icon{
+width: 24px;
+height: 24px;
+flex-shrink: 0;
+color: var(--primary-color);
+}
+#search-input{
+flex: 1;
+min-width: 0;
+font-family: "Space Mono", monospace;
+font-size: 1rem;
+padding: 12px 0;
+border: none;
+background: transparent;
+color: var(--text-color);
+}
+#search-input::placeholder{
+color: var(--muted-color);
+opacity: 1;
+}
+#search-input:focus{
+outline: none;               /* the whole bar shows the focus ring instead */
+}
+/* "No results" text inside the bar (error state) */
+#search-message{
+font-family: "Space Mono", monospace;
+font-weight: 700;
+color: var(--error-color);
+white-space: nowrap;
+}
+#search-message[hidden]{
+display: none;
+}
+#search-button{
+font-family: "Space Mono", monospace;
+font-size: 1rem;
+font-weight: 700;
+padding: 12px 24px;
+border: none;
+border-radius: 10px;
+background-color: var(--primary-color);
+color: #ffffff;
+cursor: pointer;
+}
+#search-button:hover{
+background-color: var(--button-hover-color);
+}
+
+/* ---------- 6. PLANET CARD ---------- */
+/* #cards-section only holds the card, so its h2 is hidden visually */
+#cards-section > h2{
+position: absolute;
+width: 1px;
+height: 1px;
+overflow: hidden;
+clip: rect(0 0 0 0);
+}
+/* Class names card.js should use:
+   planet-card, planet-image, planet-name, planet-type,
+   planet-description, planet-stats (with stat-item), planet-details (with detail-item) */
+.planet-card{
+display: grid;
+grid-template-columns: 120px 1fr;
+column-gap: 48px;
+align-items: start;
+padding: 48px;
+border-radius: 16px;
+background-color: var(--secondary-color);
+box-shadow: var(--shadow);
+}
+.planet-image{
+width: 120px;
+height: 120px;
+border-radius: 50%;
+object-fit: cover;
+}
+.planet-name{
+font-family: "Space Mono", monospace;
+font-size: 1.5rem;
+font-weight: 700;
+}
+.planet-type{
+font-family: "Space Mono", monospace;
+color: var(--primary-color);
+margin-bottom: 20px;
+}
+.planet-description{
+font-family: "Space Mono", monospace;
+font-size: 0.85rem;
+color: var(--muted-color);
+max-width: 46ch;
+margin-bottom: 24px;
+}
+.planet-stats{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+padding: 20px 32px;
+margin-bottom: 24px;
+border-radius: 8px;
+background-color: var(--stats-color);
+font-family: "Space Mono", monospace;
+}
+.stat-item span{
+display: block;
+font-size: 0.75rem;
+color: var(--icon-text-color);
+}
+.stat-item strong{
+font-size: 1.25rem;
+}
+.planet-details{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px 24px;
+list-style: none;
+font-family: "Space Mono", monospace;
+font-size: 0.8rem;
+color: var(--icon-text-color);
+}
+.detail-item{
+display: flex;
+align-items: center;
+gap: 12px;
+}
+.detail-item svg,
+.detail-item img{
+width: 24px;
+height: 24px;
+color: var(--text-color);
+}
+
+/* "No results found!" card (error state) */
+.status-message{
+padding: 48px 24px;
+border-radius: 16px;
+background-color: var(--secondary-color);
+text-align: center;
+font-family: "Space Mono", monospace;
+color: var(--intro-color);
+}
+.status-message h3{
+color: var(--text-color);
+font-size: 1.25rem;
+margin-bottom: 12px;
+}
+
+/* ---------- 7. COMPARISON TABLE ---------- */
+#table-section h2{
+font-size: 1.75rem;
+color: var(--heading-color);
+margin-bottom: 8px;
+}
+.table-intro{
+color: var(--intro-color);
+margin-bottom: 32px;
+}
+.table-caption{
+font-weight: 600;
+margin-bottom: 16px;
+}
+.table-wrap{
+overflow-x: auto;
+}
+#planets-table{
+width: 100%;
+border-collapse: separate;
+border-spacing: 0;
+border: 1px solid var(--border-color);
+border-radius: 16px;
+overflow: hidden;
+font-size: 0.9rem;
+text-align: center;
+}
+#planets-table th,
+#planets-table td{
+padding: 12px 16px;
+border: 1px solid var(--border-color);
+}
+#planets-table thead th{
+background-color: var(--table-head-bg);
+color: var(--table-head-text);
+font-weight: 600;
+}
+/* Terrestrial / Jovian / Gas Giants / Ice Giants / Dwarf cells.
+   table.js should give these cells the class group-cell (use rowspan) */
+#planets-table .group-cell{
+background-color: var(--table-group-bg);
+color: var(--table-cell-text);
+font-weight: 600;
+}
+#planets-table tbody td{
+background-color: var(--table-cell-bg);
+color: var(--table-cell-text);
+}
+#planets-table tbody td.group-cell{
+background-color: var(--table-group-bg);
+}
+
+/* ---------- 8. FOOTER ---------- */
+footer{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 24px;
+padding: 24px 0 56px;
+color: var(--footer-color);
+}
+footer h2{
+font-size: 1.1rem;
+font-weight: 500;
+margin-bottom: 16px;
+}
+footer p{
+font-weight: 500;
+}
+footer a{
+color: inherit;
+}
+footer a:hover{
+text-decoration: underline;
+}
+
+/* ---------- 9. TABLET ---------- */
+@media (max-width: 800px){
+header,
+main,
+footer{
+padding-left: 24px;
+padding-right: 24px;
+}
+header{ padding-top: 40px; }
+.planet-card{
+padding: 32px;
+column-gap: 32px;
+}
+}
+
+/* ---------- 10. MOBILE ---------- */
+@media (max-width: 600px){
+header,
+main,
+footer{
+padding-left: 16px;
+padding-right: 16px;
+}
+header{ padding-top: 24px; padding-bottom: 20px; }
+#search-section{
+padding-left: 16px;
+}
+#search-message{
+display: none;       /* the message card below is enough on a small screen */
+}
+.planet-card{
+grid-template-columns: 90px 1fr;
+column-gap: 20px;
+padding: 24px;
+}
+.planet-image{
+width: 90px;
+height: 90px;
+}
+.planet-name{
+font-size: 1.4rem;
+}
+/* description, stats and details span the full card width under the image */
+.planet-description,
+.planet-stats,
+.planet-details{
+grid-column: 1 / -1;
+}
+.planet-description{
+margin-top: 20px;
+}
+.planet-stats{
+grid-template-columns: 1fr;
+padding: 20px;
+}
+.planet-details{
+grid-template-columns: 1fr;
+gap: 16px;
+font-size: 0.9rem;
+}
+#table-section h2{
+font-size: 1.6rem;
+}
+/* the table shows only Name and Diameter on mobile: hide the Mass column.
+   Give the Mass th and td the class col-mass */
+#planets-table .col-mass{
+display: none;
+}
+#planets-table{
+font-size: 0.8rem;
+}
+#planets-table th,
+#planets-table td{
+padding: 10px 8px;
+}
+footer{
+grid-template-columns: 1fr;
+}
+}
+
+/* ---------- 11. REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce){
+*{
+transition: none !important;
+}
+}
+
+/* ---------- 12. SCREEN-READER-ONLY TEXT ---------- */
+.visually-hidden{
+position: absolute;
+width: 1px;
+height: 1px;
+overflow: hidden;
+clip: rect(0 0 0 0);
+white-space: nowrap;
+}
