@@ -27,3 +27,25 @@ function toggleTheme() {
 if (toggleButton) {
   toggleButton.addEventListener("click", toggleTheme);
 }
+
+const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const themeLabel = document.getElementById('themeLabel');
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    const isDark = theme === 'dark';
+    themeLabel.textContent = isDark ? 'LIGHT' : 'DARK';
+    toggle.setAttribute('aria-pressed', String(isDark));
+    toggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+
+  let startTheme = 'light';
+  try { startTheme = localStorage.getItem('theme') || 'light'; } catch (e) {}
+  applyTheme(startTheme === 'dark' ? 'dark' : 'light');
+
+  toggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
