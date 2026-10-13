@@ -65,11 +65,11 @@ const card = make("article", "planet-card");
 
 const image = make("img", "planet-image");
 image.src = planet.image;
-image.alt = https://www.google.com/url?q=http://planet.name&source=gmail&ust=1791907406163000&sa=E;
+image.alt = planet.name
 
 const heading = make("div");
 heading.append(
-make("h3", "planet-name", show(https://www.google.com/url?q=http://planet.name&source=gmail&ust=1791907406163000&sa=E)),
+make("h3", "planet-name", show(planet.name))
 make("p", "planet-type", show(planet.type))
 );
 
