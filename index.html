@@ -19,7 +19,7 @@
 <main>
 
   <!-- SEARCH -->
-  <section id="search-section">
+  <form id="search-section">
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
       <circle cx="11" cy="11" r="7"></circle>
       <path d="M20 20l-4-4"></path>
@@ -27,8 +27,8 @@
     <label for="search-input">Search planet name</label>
     <input type="search" id="search-input" placeholder="Search planet name...">
     <span id="search-message" role="status" hidden>No results</span>
-    <button id="search-button" type="button">Search</button>
-  </section>
+    <button id="search-button" type="submit">Search</button>
+  </form>
 
   <!-- PLANET CARD: card.js builds the card inside #cards-container.
        Markup for ONE card (class names are styled in Foundation.css):
