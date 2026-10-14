@@ -65,7 +65,7 @@ const card = make("article", "planet-card");
 
 const image = make("img", "planet-image");
 image.src = planet.image;
-image.alt = planet.name:
+image.alt = planet.name;
 
 const heading = make("div");
 heading.append(
