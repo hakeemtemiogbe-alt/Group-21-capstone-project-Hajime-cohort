@@ -2,6 +2,7 @@
 const searchInput = document.getElementById('search-input');
 // The search form button.
 const searchBtn = document.getElementById('search-button');
+const searchMsg = document.getElementById('search-message');
 
 /*
 This function takes the input and filters the allPlanets array
@@ -22,9 +23,11 @@ function searchPlanet(e) {
   if (filterPlanet) {
     // Uses the showPlanet() function in card.js to load searched planet if found.
     showPlanet(filterPlanet);
+    searchMsg.hidden = true;
   }else {
     // Uses the showNoResults() function in card.js to show no planet is found.
     showNoResults();
+    searchMsg.hidden = false;
   }
 }
 
