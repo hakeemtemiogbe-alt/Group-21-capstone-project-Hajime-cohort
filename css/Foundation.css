@@ -1,3 +1,4 @@
+
 /* =========================================================
    FOUNDATION.CSS  (Group 21 planets app)
    Built from the Figma export (Hajime cohort).
@@ -239,6 +240,10 @@ width: 120px;
 height: 120px;
 border-radius: 50%;
 object-fit: cover;
+}
+@media (min-width: 601px) {
+  .planet-image { grid-row: 1 / span 4; }
+  .planet-card > :not(.planet-image) { grid-column: 2; }
 }
 .planet-name{
 font-family: "Space Mono", monospace;
