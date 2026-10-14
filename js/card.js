@@ -65,11 +65,11 @@ const card = make("article", "planet-card");
 
 const image = make("img", "planet-image");
 image.src = planet.image;
-image.alt = planet.name
+image.alt = planet.name:
 
 const heading = make("div");
 heading.append(
-make("h3", "planet-name", show(planet.name))
+make("h3", "planet-name", show(planet.name)),
 make("p", "planet-type", show(planet.type))
 );
 
