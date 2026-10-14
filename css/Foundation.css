@@ -422,13 +422,13 @@ padding-left: 16px;
 display: none;       /* the message card below is enough on a small screen */
 }
 .planet-card{
-grid-template-columns: 90px 1fr;
+grid-template-columns: 70px 1fr;
 column-gap: 20px;
 padding: 24px;
 }
 .planet-image{
-width: 90px;
-height: 90px;
+width: 70px;
+height: 70px;
 }
 .planet-name{
 font-size: 1.4rem;
