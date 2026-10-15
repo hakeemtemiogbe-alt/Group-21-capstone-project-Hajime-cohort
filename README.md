@@ -18,7 +18,7 @@ Built with HTML, CSS and JavaScript. Planet data is fetched from a JSON API.
 | favouregbunine | [favouregbunine](https://github.com/favouregbunine) |
 | mattyD-coder | [mattyD-coder](https://github.com/mattyD-coder) |
 | Nonso | [nonsojonas](https://github.com/nonsojonas) |
-| (name), no GitHub account yet | link pending |
+| Grace Ajadi | [Grace001-tech](https://github.com/Grace001-tech) |
 
 ## How we work
 
