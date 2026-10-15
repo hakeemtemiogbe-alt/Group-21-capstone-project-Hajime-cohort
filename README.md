@@ -11,13 +11,13 @@ Built with HTML, CSS and JavaScript. Planet data is fetched from a JSON API.
 | Hakeem (Team Lead) | [hakeemtemiogbe-alt](https://github.com/hakeemtemiogbe-alt) |
 | Fikunayomi (Assistant Team Lead) | [Fikky004](https://github.com/Fikky004) |
 | Aderonke | [aderonkeadekanye37](https://github.com/aderonkeadekanye37) |
-| akaninyeneiniudoh-cloud | [akaninyeneiniudoh-cloud](https://github.com/akaninyeneiniudoh-cloud) |
-| akinwunmisemiu03-boop | [akinwunmisemiu03-boop](https://github.com/akinwunmisemiu03-boop) |
+| Akaninyeneiniudoh-cloud | [akaninyeneiniudoh-cloud](https://github.com/akaninyeneiniudoh-cloud) |
+| Akinwunmisemiu03-boop | [akinwunmisemiu03-boop](https://github.com/akinwunmisemiu03-boop) |
 | EbubeCosmas | [EbubeCosmas](https://github.com/EbubeCosmas) |
 | EdikanI427 | [EdikanI427](https://github.com/EdikanI427) |
-| favouregbunine | [favouregbunine](https://github.com/favouregbunine) |
-| mattyD-coder | [mattyD-coder](https://github.com/mattyD-coder) |
-| Nonso | [nonsojonas](https://github.com/nonsojonas) |
+| Favouregbunine | [favouregbunine](https://github.com/favouregbunine) |
+| MattyD-coder | [mattyD-coder](https://github.com/mattyD-coder) |
+| Nonso Jonas | [nonsojonas](https://github.com/nonsojonas) |
 | Grace Ajadi | [Grace001-tech](https://github.com/Grace001-tech) |
 
 ## How we work
