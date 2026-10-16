@@ -27,7 +27,6 @@ Built with HTML, CSS and JavaScript. Planet data is fetched from a JSON API.
 - When your work is ready, open a pull request.
 - The person who opens a pull request must not merge it. Someone else reviews and merges it.
 
-
 ## Live Site
 
 https://group21-planets-hajime.netlify.app
@@ -40,7 +39,7 @@ https://group21-planets-hajime.netlify.app
 3. You need an internet connection, because the planet data is fetched from a JSON API:
    https://anurella.github.io/json/planet.json
 
-   ## Components and Contributors
+## Components and Contributors
 
 | Component | What it does | Worked on by |
 |---|---|---|
@@ -51,7 +50,7 @@ https://group21-planets-hajime.netlify.app
 | Planet card (`card.js`) | Builds the planet card and the "no results" message | favouregbunine |
 | Data fetching and search (`data.js`, `search.js`) | Fetches planets from the API and searches by name | nonsojonas |
 | Loading state | Loader shown while searching | nonsojonas |
-| Comparison table | Static NASA planetary facts | hakeemtemiogbe-alt, EbubeCosmas |
+| Comparison table | Static NASA planetary facts | Hakeem |
 | Footer | About section, member names and links | akinwunmisemiu03-boop, Grace001-tech, Fikky004 (coordination) |
 | Design review | Checked the site against the Figma design and the project brief | EdikanI427, akaninyeneiniudoh-cloud |
 | README and deployment | Documentation and Netlify deployment | hakeemtemiogbe-alt |
