@@ -26,3 +26,32 @@ Built with HTML, CSS and JavaScript. Planet data is fetched from a JSON API.
 - Each person works on their own branch, named after the task, for example `header-toggle`.
 - When your work is ready, open a pull request.
 - The person who opens a pull request must not merge it. Someone else reviews and merges it.
+
+
+## Live Site
+
+https://group21-planets-hajime.netlify.app
+
+## How to Run Locally
+
+1. Clone the repository:
+   `git clone https://github.com/hakeemtemiogbe-alt/Group-21-capstone-project-Hajime-cohort.git`
+2. Open the project folder and open `index.html` in your browser (or use the VS Code Live Server extension).
+3. You need an internet connection, because the planet data is fetched from a JSON API:
+   https://anurella.github.io/json/planet.json
+
+   ## Components and Contributors
+
+| Component | What it does | Worked on by |
+|---|---|---|
+| Foundation HTML | Base semantic page structure | mattyD-coder, Fikky004 |
+| Foundation CSS | Layout, light and dark colours, fonts | aderonkeadekanye37, Fikky004 |
+| Header and theme toggle | Logo and light/dark mode button | Foundation group above. EbubeCosmas also submitted a version (PR #14, not merged because the foundation already covered it) |
+| JavaScript foundation | JS files created and linked in order, theme toggle code | hakeemtemiogbe-alt |
+| Planet card (`card.js`) | Builds the planet card and the "no results" message | favouregbunine |
+| Data fetching and search (`data.js`, `search.js`) | Fetches planets from the API and searches by name | nonsojonas |
+| Loading state | Loader shown while searching | nonsojonas |
+| Comparison table | Static NASA planetary facts | hakeemtemiogbe-alt, EbubeCosmas |
+| Footer | About section, member names and links | akinwunmisemiu03-boop, Grace001-tech, Fikky004 (coordination) |
+| Design review | Checked the site against the Figma design and the project brief | EdikanI427, akaninyeneiniudoh-cloud |
+| README and deployment | Documentation and Netlify deployment | hakeemtemiogbe-alt |
