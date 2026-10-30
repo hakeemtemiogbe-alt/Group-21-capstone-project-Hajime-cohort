@@ -9,11 +9,11 @@ Built with HTML, CSS and JavaScript. Planet data is fetched from a JSON API.
 | Name | GitHub |
 |---|---|
 | Adeyele Hakeem (Team Lead) | [hakeemtemiogbe-alt](https://github.com/hakeemtemiogbe-alt) |
-| Fikunayomi (Assistant Team Lead) | [Fikky004](https://github.com/Fikky004) |
+| Alabi Oluwafikunayomi (Assistant Team Lead) | [Fikky004](https://github.com/Fikky004) |
 | Aderonke Adekanye | [aderonkeadekanye37](https://github.com/aderonkeadekanye37) |
 | Udoh Akaninyene | [akaninyeneiniudoh-cloud](https://github.com/akaninyeneiniudoh-cloud) |
 | Akinwunmi Semiu | [akinwunmisemiu03-boop](https://github.com/akinwunmisemiu03-boop) |
-| EbubeCosmas | [EbubeCosmas](https://github.com/EbubeCosmas) |
+| Chkwukwuo Ebube | [EbubeCosmas](https://github.com/EbubeCosmas) |
 | Edikan Edem | [EdikanI427](https://github.com/EdikanI427) |
 | Egbunine Favour | [favouregbunine](https://github.com/favouregbunine) |
 | Obibo Matthias | [mattyD-coder](https://github.com/mattyD-coder) |
